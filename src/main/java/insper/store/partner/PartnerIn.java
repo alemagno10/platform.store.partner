@@ -8,5 +8,5 @@ import lombok.experimental.Accessors;
 public record PartnerIn (
     String name,
     String email,
-    String password
+    String cnpj
 ) {}
