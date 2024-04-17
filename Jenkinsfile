@@ -1,9 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('Jenkins Account') {
+        stage('Jenkins Partner') {
             steps {
-                echo 'Jenkins Account'
+                echo 'Jenkins Partner'
             }
         }
         stage('Build') { 
