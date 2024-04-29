@@ -30,4 +30,7 @@ public interface PartnerController {
 
     @DeleteMapping("/partner/{id}")
     public ResponseEntity<?> delete(String id);
+
+    @GetMapping("/partner/{id}")
+    public ResponseEntity<PartnerOut> findUser(String id);
 }
