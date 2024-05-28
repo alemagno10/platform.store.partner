@@ -22,6 +22,11 @@ public interface PartnerController {
     @GetMapping("/partner")
     ResponseEntity<List<PartnerOut>> read();
 
+    // @GetMapping("/partner/{id}")
+    // ResponseEntity<PartnerOut> readPartner(
+    //     @PathVariable(required = true) String id
+    // );
+
     @PutMapping("/partner/{id}")
     public ResponseEntity<PartnerOut> update (
         @PathVariable(required = true) String id,
@@ -29,8 +34,12 @@ public interface PartnerController {
     );
 
     @DeleteMapping("/partner/{id}")
-    public ResponseEntity<?> delete(String id);
+    public ResponseEntity<?> delete(
+        @PathVariable(required = true) String id
+    );
 
     @GetMapping("/partner/{id}")
-    public ResponseEntity<PartnerOut> findUser(String id);
+    public ResponseEntity<PartnerOut> findUser(
+        @PathVariable(required = true) String id
+    );
 }
